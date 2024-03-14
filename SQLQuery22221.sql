@@ -1,6 +1,24 @@
 CREATE DATABASE bd_univ
 go
-CREATE TABLE Campi 
+
+ CREATE TABLE Aluno 
+( 
+ Nome VARCHAR,  
+ CPF INT,  
+ RG INT,  
+ CodAluno INT,  
+ etnia INT,  
+ genero INT,  
+ logradouro FLOAT,  
+ bairro VARCHAR,  
+ cidade VARCHAR,  
+ estado VARCHAR,  
+ cep FLOAT,  
+ complemento INT,  
+ numero INT,  
+); 
+ 
+ CREATE TABLE Campi 
 ( 
  CodCampi INT PRIMARY KEY,  
  laboratorio VARCHAR, 
@@ -24,22 +42,7 @@ CREATE TABLE Turma
  idTbProfessorTurma INT ADD FOREIGN KEY(idTbProfessorTurma) REFERENCES ProfessorTurma (idTbProfessorTurma),  
 ); 
 
-CREATE TABLE Aluno 
-( 
- Nome VARCHAR,  
- CPF INT,  
- RG INT,  
- CodAluno INT,  
- etnia INT,  
- genero INT,  
- logradouro FLOAT,  
- bairro VARCHAR,  
- cidade VARCHAR,  
- estado VARCHAR,  
- cep FLOAT,  
- complemento INT,  
- numero INT,  
-); 
+
 
 CREATE TABLE Professor 
 ( 
